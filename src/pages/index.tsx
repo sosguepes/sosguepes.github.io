@@ -1,12 +1,16 @@
 import * as React from "react";
 import type { PageProps } from "gatsby";
+import PageLayout from "components/PageLayout";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <main>
+    <PageLayout>
       <h1>It Works!</h1>
-    </main>
+      <p>Hello</p>
+    </PageLayout>
   );
 };
+
+export const Head = () => <title>SOS guêpes 74</title>;
 
 export default IndexPage;
