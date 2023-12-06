@@ -24,7 +24,7 @@ const config: GatsbyConfig = {
         web: [
           {
             name: `DM Sans`,
-            file: `https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap`,
+            file: `https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap`,
           },
         ],
       },
@@ -32,7 +32,7 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/images/logo.png",
       },
     },
     "gatsby-plugin-sharp",

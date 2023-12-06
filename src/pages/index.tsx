@@ -1,13 +1,16 @@
 import * as React from "react";
 import type { PageProps } from "gatsby";
-import PageLayout from "components/PageLayout";
+import NavBar from "components/NavBar";
+import Banner from "components/Banner";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <PageLayout>
-      <h1>It Works!</h1>
-      <p>Hello</p>
-    </PageLayout>
+    <>
+      <NavBar />
+      <main>
+        <Banner />
+      </main>
+    </>
   );
 };
 

@@ -1,5 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
-    background-color: #F9D549;
+    background-color: #f2d270;
     font-family: "DM Sans", sans-serif;
-    color: #215CB5;
+    color: #000000;
 }
