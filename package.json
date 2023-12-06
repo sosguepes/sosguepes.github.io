@@ -13,12 +13,12 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "github-pages-build": "gatsby build --prefix-paths"
   },
   "dependencies": {
-    "@fontsource/dm-mono": "^5.0.17",
-    "@fontsource/dm-sans": "^5.0.17",
-    "gatsby": "^5.12.4",
+    "gatsby": "^5.12.11",
     "gatsby-omni-font-loader": "^2.0.2",
     "gatsby-plugin-image": "^3.12.3",
     "gatsby-plugin-manifest": "^5.12.3",
@@ -27,6 +27,7 @@
     "gatsby-plugin-sitemap": "^6.12.3",
     "gatsby-source-filesystem": "^5.12.1",
     "gatsby-transformer-sharp": "^5.12.3",
+    "gh-pages": "^6.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",

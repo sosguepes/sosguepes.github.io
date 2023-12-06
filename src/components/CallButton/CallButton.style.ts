@@ -4,7 +4,6 @@ import { styled } from "styled-components";
 export const Container = styled.div``;
 
 export const Link = styled.a`
-  color: inherit;
   text-decoration: none;
 `;
 

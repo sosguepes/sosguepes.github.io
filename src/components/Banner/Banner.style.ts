@@ -38,9 +38,9 @@ export const TextContainer = styled.div`
   }
 `;
 
-export const LogoContainer = styled.div`
+export const ImageContainer = styled.div`
   width: 100%;
-  max-width: 2368px;
+  max-width: 540px;
   @media screen and (min-width: 40em) {
     width: 50%;
   }
