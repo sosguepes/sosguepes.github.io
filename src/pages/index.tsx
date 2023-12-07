@@ -2,7 +2,7 @@ import * as React from "react";
 import type { PageProps } from "gatsby";
 import NavBar from "components/NavBar";
 import HeroBanner from "components/HeroBanner";
-import ServiceBanner from "components/ServiceBanner";
+import QualityGuaranteeBanner from "components/QualityGuaranteeBanner";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -10,7 +10,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <NavBar />
       <main>
         <HeroBanner />
-        <ServiceBanner />
+        <QualityGuaranteeBanner />
       </main>
     </>
   );

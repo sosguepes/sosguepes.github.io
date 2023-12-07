@@ -3,16 +3,16 @@ import {
   SecondaryTitle,
   Section,
   ServiceQualityTable,
-} from "./ServiceBanner.style";
+} from "./QualityGuaranteeBanner.style";
 import ServiceItem from "components/ServiceItem";
 import { graphql, useStaticQuery } from "gatsby";
 
-const ServiceBanner = () => {
+const QualityGuaranteeBanner = () => {
   const data = useStaticQuery(graphql`
     query MyQuery {
       allFile(
         filter: {
-          sourceInstanceName: { eq: "service-nodes" }
+          sourceInstanceName: { eq: "quality-guarantees" }
           childMdx: { frontmatter: { text: { ne: null } } }
         }
       ) {
@@ -36,7 +36,7 @@ const ServiceBanner = () => {
   `);
 
   return (
-    <Section id="services">
+    <Section id="quality-guarantees">
       <SecondaryTitle>À partir de 90€ TTC</SecondaryTitle>
       <ServiceQualityTable>
         {data.allFile.edges.map((item: any) => (
@@ -54,4 +54,4 @@ const ServiceBanner = () => {
   );
 };
 
-export default ServiceBanner;
+export default QualityGuaranteeBanner;

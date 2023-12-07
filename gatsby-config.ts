@@ -48,10 +48,10 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "service-nodes",
-        path: `${__dirname}/service-nodes`,
+        name: "quality-guarantees",
+        path: `${__dirname}/quality-guarantees`,
       },
-      __key: "service-nodes",
+      __key: "quality-guarantees",
     },
     "gatsby-plugin-mdx",
     "gatsby-plugin-resolve-src",

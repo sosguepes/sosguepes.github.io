@@ -1,6 +1,7 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import Button from "components/ui/Button";
+import { PhoneNumberTextZone } from "./CallButton.style";
 
 const PHONE_NUMBER_LOCATION_PREFIX = "+33";
 const PHONE_NUMBER = "0681152482";
@@ -17,7 +18,7 @@ const CallButton = () => {
         width={PHONE_ICON_SIZE}
         height={PHONE_ICON_SIZE}
       />
-      <span>{phoneNumberWithSpaces}</span>
+      <PhoneNumberTextZone>{phoneNumberWithSpaces}</PhoneNumberTextZone>
     </Button>
   );
 };

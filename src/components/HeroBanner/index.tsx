@@ -34,7 +34,7 @@ const HeroBanner = () => (
           </SubTitle>
           <ButtonContainer>
             <CallButton />
-            <StyledViewMoreButton sectionId="services" />
+            <StyledViewMoreButton sectionId="quality-guarantees" />
           </ButtonContainer>
         </TextContainer>
       </Seperator>
