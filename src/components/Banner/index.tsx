@@ -22,7 +22,9 @@ const Banner = () => (
           />
         </ImageContainer>
         <TextContainer>
-          <TextTitle>Destruction de nids de guêpes et de frelons</TextTitle>
+          <TextTitle>
+            Spécialiste en destruction de guêpes et de frelons dans le Chablais
+          </TextTitle>
           <p>
             SOS Guêpes 74 opère dans toute la région du Chablais et ses
             alentours. Appelez Ghislain pour obtenir un devis!

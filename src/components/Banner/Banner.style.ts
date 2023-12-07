@@ -40,22 +40,22 @@ export const TextContainer = styled.div`
 
 export const ImageContainer = styled.div`
   width: 100%;
-  max-width: 540px;
+  max-width: 450px;
   @media screen and (min-width: 40em) {
     width: 50%;
   }
 `;
 
 export const TextTitle = styled.h1`
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.1;
   margin-bottom: 16px;
-  font-size: 32px;
+  font-size: 28px;
   font-family: "DM Sans", sans-serif;
   margin-top: 0px;
 
   @media screen and (min-width: 52em) {
-    font-size: 48px;
+    font-size: 40px;
   }
 `;
