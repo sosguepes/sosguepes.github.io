@@ -20,13 +20,13 @@ const config: GatsbyConfig = {
       options: {
         enableListener: true,
         preconnect: [
-          `https://fonts.googleapis.com`,
-          `https://fonts.gstatic.com`,
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
         ],
         web: [
           {
-            name: `DM Sans`,
-            file: `https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap`,
+            name: "DM Sans",
+            file: "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap",
           },
         ],
       },
