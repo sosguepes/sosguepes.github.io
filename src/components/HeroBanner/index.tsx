@@ -7,7 +7,7 @@ import {
   ImageContainer,
   TextTitle,
   ButtonContainer,
-  StyledPriceDisclaimer,
+  StyledViewMoreButton,
   SubTitle,
 } from "./HeroBanner.style";
 import { StaticImage } from "gatsby-plugin-image";
@@ -34,7 +34,7 @@ const HeroBanner = () => (
           </SubTitle>
           <ButtonContainer>
             <CallButton />
-            <StyledPriceDisclaimer />
+            <StyledViewMoreButton sectionId="services" />
           </ButtonContainer>
         </TextContainer>
       </Seperator>

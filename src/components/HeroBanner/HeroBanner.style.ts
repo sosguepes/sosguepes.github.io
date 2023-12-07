@@ -1,7 +1,8 @@
 import { styled } from "styled-components";
-import PriceDisclaimer from "components/PriceDisclaimer";
+
 import { primaryColor } from "style";
 import { titleStyle } from "components/ui/Title";
+import ViewMoreButton from "components/ViewMoreButton";
 
 export const Section = styled.section`
   padding-bottom: 32px;
@@ -52,7 +53,7 @@ export const ImageContainer = styled.div`
 
 export const TextTitle = styled.h1`
   ${titleStyle}
-  font-size: 28px;
+  font-size: 25px;
   margin-top: 0px;
 
   @media screen and (min-width: 52em) {
@@ -65,7 +66,7 @@ export const ButtonContainer = styled.div`
   align-items: center;
 `;
 
-export const StyledPriceDisclaimer = styled(PriceDisclaimer)`
+export const StyledViewMoreButton = styled(ViewMoreButton)`
   margin-left: 16px;
 `;
 
