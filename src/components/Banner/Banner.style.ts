@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import PriceDisclaimer from "components/PriceDisclaimer";
 
 export const Section = styled.div`
   padding-bottom: 32px;
@@ -58,4 +59,13 @@ export const TextTitle = styled.h1`
   @media screen and (min-width: 52em) {
     font-size: 40px;
   }
+`;
+
+export const ButtonRow = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const StyledPriceDisclaimer = styled(PriceDisclaimer)`
+  margin-left: 16px;
 `;
