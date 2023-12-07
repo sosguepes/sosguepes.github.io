@@ -55,6 +55,7 @@ const config: GatsbyConfig = {
     },
     "gatsby-plugin-mdx",
     "gatsby-plugin-resolve-src",
+    "gatsby-plugin-styled-components",
   ],
 };
 
