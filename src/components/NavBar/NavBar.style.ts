@@ -1,7 +1,7 @@
 import { primaryColor } from "style";
 import { styled } from "styled-components";
 
-export const ColorWrapper = styled.div`
+export const ColorWrapper = styled.header`
   background-color: ${primaryColor};
 `;
 
