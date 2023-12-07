@@ -25,13 +25,13 @@ export const ServiceQualityTable = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
 
-  @media screen and (min-width: 52em) {
+  @media screen and (min-width: 40em) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
 
-  @media screen and (min-width: 60em) {
+  @media screen and (min-width: 52em) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
   }
