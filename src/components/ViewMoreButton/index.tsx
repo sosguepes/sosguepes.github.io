@@ -1,3 +1,4 @@
+import Button from "components/ui/Button";
 import React from "react";
 
 interface PropsType {
@@ -6,9 +7,9 @@ interface PropsType {
 }
 
 const ViewMoreButton = ({ className, sectionId }: PropsType) => (
-  <a href={`#${sectionId}`}>
-    <p className={className}>Voir plus</p>
-  </a>
+  <Button href={`#${sectionId}`} primary>
+    <span>Voir plus</span>
+  </Button>
 );
 
 export default ViewMoreButton;
