@@ -22,10 +22,10 @@ const Banner = () => (
           />
         </ImageContainer>
         <TextContainer>
-          <TextTitle>Débarrassez-vous de vos nuisibles</TextTitle>
+          <TextTitle>Destruction de nids de guêpes et de frelons</TextTitle>
           <p>
-            SOS Guêpes 74 opèrent dans toute la Haute-Savoie. Appelez Ghislain
-            pour obtenir un devis!
+            SOS Guêpes 74 opère dans toute la région du Chablais et ses
+            alentours. Appelez Ghislain pour obtenir un devis!
           </p>
           <CallButton />
         </TextContainer>
