@@ -2,8 +2,8 @@
     box-sizing: border-box;
 }
 
-html {
-    background-color: #f2d270;
+body {
+    margin: 0;
     font-family: "DM Sans", sans-serif;
     color: #000000;
 }

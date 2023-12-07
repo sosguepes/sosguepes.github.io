@@ -1,11 +1,12 @@
 import { styled } from "styled-components";
 import PriceDisclaimer from "components/PriceDisclaimer";
+import { primaryColor } from "style";
 
 export const Section = styled.div`
   padding-bottom: 32px;
   padding-top: 16px;
   width: 100%;
-
+  background-color: ${primaryColor};
   @media screen and (min-width: 40em) {
     padding-bottom: 64px;
     padding-top: 64px;
