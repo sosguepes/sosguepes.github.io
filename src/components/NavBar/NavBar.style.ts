@@ -1,8 +1,11 @@
 import { primaryColor } from "style";
 import { styled } from "styled-components";
 
-export const Container = styled.nav`
+export const ColorWrapper = styled.div`
   background-color: ${primaryColor};
+`;
+
+export const Container = styled.nav`
   margin-left: auto;
   margin-right: auto;
   padding-top: 8px;

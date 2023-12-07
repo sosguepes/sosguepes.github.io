@@ -8,11 +8,12 @@ import {
   TextTitle,
   ButtonContainer,
   StyledPriceDisclaimer,
-} from "./Banner.style";
+  SubTitle,
+} from "./HeroBanner.style";
 import { StaticImage } from "gatsby-plugin-image";
 import CallButton from "components/CallButton";
 
-const Banner = () => (
+const HeroBanner = () => (
   <Section>
     <Container>
       <Seperator>
@@ -27,10 +28,10 @@ const Banner = () => (
           <TextTitle>
             Spécialiste en destruction de guêpes et de frelons dans le Chablais
           </TextTitle>
-          <p>
+          <SubTitle>
             SOS Guêpes 74 opère dans toute la région du Chablais et ses
             alentours. Appelez Ghislain pour obtenir un devis!
-          </p>
+          </SubTitle>
           <ButtonContainer>
             <CallButton />
             <StyledPriceDisclaimer />
@@ -41,4 +42,4 @@ const Banner = () => (
   </Section>
 );
 
-export default Banner;
+export default HeroBanner;

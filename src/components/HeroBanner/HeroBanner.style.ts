@@ -1,15 +1,17 @@
 import { styled } from "styled-components";
 import PriceDisclaimer from "components/PriceDisclaimer";
 import { primaryColor } from "style";
+import { titleStyle } from "components/ui/Title";
 
-export const Section = styled.div`
+export const Section = styled.section`
   padding-bottom: 32px;
   padding-top: 16px;
   width: 100%;
   background-color: ${primaryColor};
+
   @media screen and (min-width: 40em) {
     padding-bottom: 64px;
-    padding-top: 64px;
+    padding-top: 32px;
   }
 `;
 
@@ -49,12 +51,8 @@ export const ImageContainer = styled.div`
 `;
 
 export const TextTitle = styled.h1`
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  margin-bottom: 16px;
+  ${titleStyle}
   font-size: 28px;
-  font-family: "DM Sans", sans-serif;
   margin-top: 0px;
 
   @media screen and (min-width: 52em) {
@@ -69,4 +67,12 @@ export const ButtonContainer = styled.div`
 
 export const StyledPriceDisclaimer = styled(PriceDisclaimer)`
   margin-left: 16px;
+`;
+
+export const SubTitle = styled.p`
+  display: none;
+
+  @media screen and (min-width: 52em) {
+    display: block;
+  }
 `;
