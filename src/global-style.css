@@ -12,3 +12,11 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+a:focus {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}

@@ -17,9 +17,11 @@ export const Container = styled.div<{ $primary?: boolean }>`
   align-items: center;
   width: fit-content;
 
-  &:hover {
-    background-color: ${(props) =>
-      props.$primary ? darkPrimaryColor : secondaryColor};
+  @media (hover: hover) {
+    &:hover {
+      background-color: ${(props) =>
+        props.$primary ? darkPrimaryColor : secondaryColor};
+    }
   }
 `;
 

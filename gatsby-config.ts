@@ -45,6 +45,15 @@ const config: GatsbyConfig = {
       },
       __key: "images",
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "service-nodes",
+        path: `${__dirname}/service-nodes`,
+      },
+      __key: "service-nodes",
+    },
+    "gatsby-plugin-mdx",
     "gatsby-plugin-resolve-src",
   ],
 };
