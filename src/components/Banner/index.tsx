@@ -6,7 +6,7 @@ import {
   TextContainer,
   ImageContainer,
   TextTitle,
-  ButtonRow,
+  ButtonContainer,
   StyledPriceDisclaimer,
 } from "./Banner.style";
 import { StaticImage } from "gatsby-plugin-image";
@@ -31,10 +31,10 @@ const Banner = () => (
             SOS Guêpes 74 opère dans toute la région du Chablais et ses
             alentours. Appelez Ghislain pour obtenir un devis!
           </p>
-          <ButtonRow>
+          <ButtonContainer>
             <CallButton />
             <StyledPriceDisclaimer />
-          </ButtonRow>
+          </ButtonContainer>
         </TextContainer>
       </Seperator>
     </Container>

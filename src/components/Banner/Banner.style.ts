@@ -61,7 +61,7 @@ export const TextTitle = styled.h1`
   }
 `;
 
-export const ButtonRow = styled.div`
+export const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
 `;
