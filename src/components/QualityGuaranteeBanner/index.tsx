@@ -1,11 +1,8 @@
 import React from "react";
-import {
-  SecondaryTitle,
-  Section,
-  ServiceQualityTable,
-} from "./QualityGuaranteeBanner.style";
+import { Section, ServiceQualityTable } from "./QualityGuaranteeBanner.style";
 import ServiceItem from "components/ServiceItem";
 import { graphql, useStaticQuery } from "gatsby";
+import { SecondaryTitle } from "components/ui/SecondayTitle";
 
 const QualityGuaranteeBanner = () => {
   const data = useStaticQuery(graphql`

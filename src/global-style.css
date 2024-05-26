@@ -8,6 +8,11 @@ body {
     color: #000000;
 }
 
+
+html {
+    scroll-behavior: smooth;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -15,8 +20,4 @@ a {
 
 a:focus {
     text-decoration: none;
-}
-
-html {
-    scroll-behavior: smooth;
 }
