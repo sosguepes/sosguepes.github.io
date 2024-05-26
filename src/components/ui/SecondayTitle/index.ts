@@ -6,6 +6,7 @@ export const SecondaryTitle = styled.h2`
   font-size: 22px;
   margin-top: 32px;
   margin-bottom: 32px;
+  margin-bottom: 32px;
 
   @media screen and (min-width: 52em) {
     font-size: 30px;

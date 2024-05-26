@@ -16,12 +16,16 @@ export const Section = styled.section`
   }
 `;
 
+export const Wrapper = styled.div`
+  max-width: 1080px;
+  margin: auto;
+`;
+
 export const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
-  max-width: 1080px;
-  padding-left: 32px;
-  padding-right: 32px;
+  margin-left: 32px;
+  margin-right: 32px;
 `;
 
 export const Seperator = styled.div`

@@ -1,14 +1,16 @@
 import React from "react";
 import { Map } from "./Map";
-import { Container } from "./MapSection.style";
+import { Container, Wrapper } from "./MapSection.style";
 import { SectionText } from "./SectionText";
 
 const MapSection = () => {
   return (
-    <Container>
-      <Map />
-      <SectionText />
-    </Container>
+    <Wrapper>
+      <Container>
+        <Map />
+        <SectionText />
+      </Container>
+    </Wrapper>
   );
 };
 
