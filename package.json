@@ -15,7 +15,7 @@
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
     "deploy": "gatsby build && gh-pages -d public",
-    "github-pages-build": "gatsby build --prefix-paths"
+    "github-pages-build": "gatsby build"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^2.1.4",
