@@ -7,7 +7,7 @@ const MapSection = () => {
   return (
     <Container>
       <Map />
-      {/* <SectionText /> */}
+      <SectionText />
     </Container>
   );
 };
