@@ -1,47 +1,32 @@
-import React, { useEffect, useState } from "react";
-
-const useWindowDimensions = () => {
-  const hasWindow = typeof window !== "undefined";
-
-  function getWindowDimensions() {
-    const width = hasWindow ? window.innerWidth : null;
-    const height = hasWindow ? window.innerHeight : null;
-    return {
-      width,
-      height,
-    };
-  }
-
-  const [windowDimensions, setWindowDimensions] = useState(
-    getWindowDimensions()
-  );
-
-  useEffect(() => {
-    if (hasWindow) {
-      function handleResize() {
-        setWindowDimensions(getWindowDimensions());
-      }
-
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    }
-  }, [hasWindow]);
-
-  return windowDimensions;
-};
+import { useWindowDimensions } from "hooks/useWindowDimensions";
+import React from "react";
+import { Wrapper } from "./Map.style";
+import { MapContainer, TileLayer } from "react-leaflet";
+import { Polygon } from "react-leaflet";
+import { INTERVENTION_AREA } from "./interventionArea";
 
 export const Map = () => {
   const { width } = useWindowDimensions();
-  let mapWidth = 640;
+  const maxMapWidth = 500;
+  let mapWidth = maxMapWidth;
   if (width) {
-    mapWidth = Math.min(640, width - 64);
+    mapWidth = Math.min(maxMapWidth, width - 64);
   }
   const mapHeight = (mapWidth * 2) / 3;
   return (
-    <iframe
-      src="https://www.google.com/maps/d/embed?mid=1hl8MSwVwgxuycpJJ2eDdSpW_mseodgM&ehbc=2E312F&noprof=1"
-      width={`${mapWidth}`}
-      height={`${mapHeight}`}
-    ></iframe>
+    <Wrapper>
+      <MapContainer
+        style={{ height: mapHeight, width: mapWidth }}
+        center={[46.239512, 6.512384]}
+        zoom={8.45}
+        scrollWheelZoom={true}
+      >
+        <Polygon positions={INTERVENTION_AREA} />
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+      </MapContainer>
+    </Wrapper>
   );
 };
