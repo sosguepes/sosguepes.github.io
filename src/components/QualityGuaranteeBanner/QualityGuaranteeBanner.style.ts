@@ -4,7 +4,10 @@ export const Section = styled.section`
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 32px;
+
+  @media screen and (min-width: 40em) {
+    margin-bottom: 32px;
+  }
 `;
 
 export const ServiceQualityTable = styled.div`

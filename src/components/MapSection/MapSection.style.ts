@@ -4,7 +4,7 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-  margin: 32px 32px 0px 32px;
+  margin: 0px 32px 0px 32px;
   justify-content: center;
   text-align: center;
 
@@ -12,6 +12,7 @@ export const Container = styled.section`
     flex-direction: row;
     justify-content: center;
     gap: 50px;
+    margin: 32px 32px 0px 32px;
   }
 `;
 
