@@ -29,6 +29,8 @@ export const QuestionAnswer = ({ question, children }: PropsType) => {
           width={20}
           height={20}
           style={{
+            width: "20px",
+            height: "20px",
             transition: "rotate 0.5s",
             rotate: `${isOpen ? "0" : "-180"}deg`,
           }}

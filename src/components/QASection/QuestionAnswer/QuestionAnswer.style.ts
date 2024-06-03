@@ -17,6 +17,7 @@ export const QuestionContainer = styled.div`
   padding: 16px 32px 16px 32px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `;
 
 export const ExpandedContainer = styled.div`
