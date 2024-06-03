@@ -12,13 +12,13 @@ export const Map = () => {
   if (width) {
     mapWidth = Math.min(maxMapWidth, width - 64);
   }
-  const mapHeight = (mapWidth * 2) / 3;
+  const mapHeight = (mapWidth * 4) / 5;
   return (
     <Wrapper>
       <MapContainer
         style={{ height: mapHeight, width: mapWidth }}
         center={[46.239512, 6.512384]}
-        zoom={8.45}
+        zoom={8}
         scrollWheelZoom={true}
       >
         <Polygon positions={INTERVENTION_AREA} />

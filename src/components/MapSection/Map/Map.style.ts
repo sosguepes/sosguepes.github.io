@@ -4,7 +4,10 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: stretch;
-  max-width: 100%;
   overflow: hidden;
+  width: 100%;
+  @media screen and (min-width: 40em) {
+    width: calc(50% - 25px);
+  }
+  height: 233px;
 `;
