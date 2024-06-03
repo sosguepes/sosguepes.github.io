@@ -1,17 +1,22 @@
-import { SecondaryTitle } from "components/ui/SecondayTitle";
 import React from "react";
-import { Container } from "./SectionText.style";
+import {
+  AreaOfInterventionText,
+  AskForQuoteButton,
+  Container,
+  MapSectionTitle,
+} from "./SectionText.style";
 
 export const SectionText = () => {
   return (
     <Container>
-      <SecondaryTitle>
+      <MapSectionTitle>
         Zones d’intervention - Chablais et alentours
-      </SecondaryTitle>
-      <p>
+      </MapSectionTitle>
+      <AreaOfInterventionText>
         Si vous souhaitez une intervention hors de la zone initiale, une
         surcharge tarifaire sera appliquée.
-      </p>
+      </AreaOfInterventionText>
+      <AskForQuoteButton sectionId="banner" text="Demander un devis" />
     </Container>
   );
 };

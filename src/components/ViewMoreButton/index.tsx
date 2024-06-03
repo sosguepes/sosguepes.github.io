@@ -3,12 +3,13 @@ import React from "react";
 
 interface PropsType {
   sectionId: string;
+  text?: string;
   className?: string;
 }
 
-const ViewMoreButton = ({ className, sectionId }: PropsType) => (
-  <Button href={`#${sectionId}`} primary>
-    <span>Voir plus</span>
+const ViewMoreButton = ({ sectionId, text, className }: PropsType) => (
+  <Button href={`#${sectionId}`} primary className={className}>
+    <span>{text || "Voir plus"}</span>
   </Button>
 );
 

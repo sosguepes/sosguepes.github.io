@@ -5,6 +5,7 @@ import {
   ExpandedContainer,
   Question,
   QuestionContainer,
+  StyledStaticImage,
 } from "./QuestionAnswer.style";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -26,11 +27,9 @@ export const QuestionAnswer = ({ question, children }: PropsType) => {
         <StaticImage
           src="./arrow_up_icon.png"
           alt="arrow up icon"
-          width={20}
-          height={20}
           style={{
-            width: "20px",
-            height: "20px",
+            width: "15px",
+            height: "15px",
             transition: "rotate 0.5s",
             rotate: `${isOpen ? "0" : "-180"}deg`,
           }}

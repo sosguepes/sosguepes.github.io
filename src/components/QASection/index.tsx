@@ -1,7 +1,8 @@
 import { SecondaryTitle } from "components/ui/SecondayTitle";
 import React from "react";
-import { Section } from "./QASection.style";
+import { CenteredText, Section } from "./QASection.style";
 import { QuestionAnswer } from "./QuestionAnswer";
+import ViewMoreButton from "components/ViewMoreButton";
 
 export const QASection = () => {
   return (
@@ -40,7 +41,7 @@ export const QASection = () => {
           <p>
             Même si le nid paraît petit et accessible, nous ne recommandons pas
             d'essayer de traiter les nids vous-même, car cela peut être
-            dangereux.En attendant l’intervention, Évitez les mouvements
+            dangereux. En attendant l'intervention, évitez les mouvements
             brusques près du nid et restez à distance.
           </p>
           <p>
@@ -64,6 +65,10 @@ export const QASection = () => {
           </p>
         </QuestionAnswer>
       </div>
+      <CenteredText>
+        Nous restons à votre disposition pour répondre à toutes vos questions
+      </CenteredText>
+      <ViewMoreButton sectionId="banner" text="Contactez nous" />
     </Section>
   );
 };

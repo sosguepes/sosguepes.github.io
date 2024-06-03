@@ -10,3 +10,7 @@ export const Section = styled.section`
   max-width: 1080px;
   margin: auto;
 `;
+
+export const CenteredText = styled.p`
+  text-align: center;
+`;

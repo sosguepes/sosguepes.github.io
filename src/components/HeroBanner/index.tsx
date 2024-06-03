@@ -15,7 +15,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import CallButton from "components/CallButton";
 
 const HeroBanner = () => (
-  <Section>
+  <Section id="banner">
     <Wrapper>
       <Container>
         <Seperator>

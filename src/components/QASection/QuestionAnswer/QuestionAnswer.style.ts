@@ -1,3 +1,4 @@
+import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -44,6 +45,9 @@ export const Answer = styled.div`
   }
 `;
 
-export const Question = styled.div`
-  margin-right: 16px;
+export const Question = styled.p`
+  width: calc(100% - 30px);
+  margin: 0px;
 `;
+
+export const StyledStaticImage = styled(StaticImage)``;
