@@ -6,11 +6,12 @@ interface PropsType {
   icon: IGatsbyImageData;
   text: string;
   alt: string;
+  className?: string;
 }
 
-const ServiceItem = ({ icon, text, alt }: PropsType) => (
-  <Container>
-    <GatsbyImage image={icon} alt={alt} />
+const ServiceItem = ({ icon, text, alt, className }: PropsType) => (
+  <Container className={className || ""}>
+    <GatsbyImage image={icon} alt={alt} style={{ minWidth: 30 }} />
     <p>{text}</p>
   </Container>
 );

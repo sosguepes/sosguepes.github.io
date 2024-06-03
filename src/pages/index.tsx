@@ -6,6 +6,7 @@ import QualityGuaranteeBanner from "components/QualityGuaranteeBanner";
 import Footer from "components/Footer";
 import MapSection from "components/MapSection";
 import { QASection } from "components/QASection";
+import { ServiceSection } from "components/ServiceSection";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -15,6 +16,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <HeroBanner />
         <QualityGuaranteeBanner />
         <MapSection />
+        <ServiceSection />
         <QASection />
       </main>
       <Footer />

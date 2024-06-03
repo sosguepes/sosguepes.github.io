@@ -52,6 +52,14 @@ const config: GatsbyConfig = {
       },
       __key: "quality-guarantees",
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "services",
+        path: `${__dirname}/services`,
+      },
+      __key: "services",
+    },
     "gatsby-plugin-mdx",
     "gatsby-plugin-resolve-src",
     "gatsby-plugin-styled-components",
