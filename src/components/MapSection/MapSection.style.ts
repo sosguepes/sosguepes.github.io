@@ -19,4 +19,5 @@ export const Container = styled.div`
 export const Wrapper = styled.section`
   max-width: 1080px;
   margin: auto;
+  margin-bottom: 16px;
 `;
