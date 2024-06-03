@@ -1,7 +1,7 @@
 import { useWindowDimensions } from "hooks/useWindowDimensions";
 import React from "react";
-import { Wrapper } from "./Map.style";
-import { MapContainer, TileLayer } from "react-leaflet";
+import { StyledMapContainer, Wrapper } from "./Map.style";
+import { TileLayer } from "react-leaflet";
 import { Polygon } from "react-leaflet";
 import { INTERVENTION_AREA } from "./interventionArea";
 
@@ -15,8 +15,7 @@ export const Map = () => {
   const mapHeight = (mapWidth * 4) / 5;
   return (
     <Wrapper>
-      <MapContainer
-        style={{ height: mapHeight, width: mapWidth }}
+      <StyledMapContainer
         center={[46.239512, 6.512384]}
         zoom={8}
         scrollWheelZoom={true}
@@ -26,7 +25,7 @@ export const Map = () => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-      </MapContainer>
+      </StyledMapContainer>
     </Wrapper>
   );
 };
