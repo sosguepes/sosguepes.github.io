@@ -5,11 +5,12 @@ import { Container } from "./ServiceItem.style";
 interface PropsType {
   icon: IGatsbyImageData;
   text: string;
+  alt: string;
 }
 
-const ServiceItem = ({ icon, text }: PropsType) => (
+const ServiceItem = ({ icon, text, alt }: PropsType) => (
   <Container>
-    <GatsbyImage image={icon} alt="Phone icon" />
+    <GatsbyImage image={icon} alt={alt} />
     <p>{text}</p>
   </Container>
 );

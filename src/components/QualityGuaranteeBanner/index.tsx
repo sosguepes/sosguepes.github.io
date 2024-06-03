@@ -24,6 +24,7 @@ const QualityGuaranteeBanner = () => {
                     gatsbyImageData(width: 40, placeholder: BLURRED)
                   }
                 }
+                alt
               }
             }
           }
@@ -44,6 +45,7 @@ const QualityGuaranteeBanner = () => {
               item.node.childMdx.frontmatter.icon.childImageSharp
                 .gatsbyImageData
             }
+            alt={item.node.childMdx.frontmatter.alt}
           />
         ))}
       </ServiceQualityTable>
