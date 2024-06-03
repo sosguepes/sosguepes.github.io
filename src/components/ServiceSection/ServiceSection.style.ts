@@ -24,6 +24,6 @@ export const StyledServiceItem = styled(ServiceItem)`
   }
   p {
     display: flex;
-    width: calc(100% - 40px);
+    width: calc(100% - 72px);
   }
 `;
