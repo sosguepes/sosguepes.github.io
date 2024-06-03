@@ -6,4 +6,5 @@ export const Wrapper = styled.div`
   justify-content: flex-start;
   align-items: stretch;
   max-width: 100%;
+  overflow: hidden;
 `;
