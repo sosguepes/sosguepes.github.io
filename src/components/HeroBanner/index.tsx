@@ -28,8 +28,7 @@ const HeroBanner = () => (
           </ImageContainer>
           <TextContainer>
             <TextTitle>
-              Spécialiste en destruction de guêpes et de frelons dans le
-              Chablais
+              Expert en nids de guêpes et de frelons dans le Chablais
             </TextTitle>
             <SubTitle>
               SOS Guêpes 74 opère dans toute la région du Chablais et ses
