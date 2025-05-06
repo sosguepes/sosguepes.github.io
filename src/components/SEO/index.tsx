@@ -2,10 +2,10 @@ import { useSiteMetadata } from "hooks/useSiteMetadata";
 import React from "react";
 
 interface PropsType {
-  title: string;
-  description: string;
-  pathname: string;
-  children: React.ReactNode;
+  title?: string;
+  description?: string;
+  pathname?: string;
+  children?: React.ReactNode;
 }
 
 export const SEO = ({ title, description, pathname, children }: PropsType) => {
