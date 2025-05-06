@@ -1,5 +1,5 @@
 import * as React from "react";
-import type { PageProps } from "gatsby";
+import type { HeadFC, PageProps } from "gatsby";
 import NavBar from "components/NavBar";
 import HeroBanner from "components/HeroBanner";
 import QualityGuaranteeBanner from "components/QualityGuaranteeBanner";
@@ -7,6 +7,7 @@ import Footer from "components/Footer";
 import MapSection from "components/MapSection";
 import { QASection } from "components/QASection";
 import { ServiceSection } from "components/ServiceSection";
+import { SEO } from "components/SEO";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -24,6 +25,5 @@ const IndexPage: React.FC<PageProps> = () => {
   );
 };
 
-export const Head = () => <title>SOS guêpes 74</title>;
-
+export const Head: HeadFC = () => <SEO />;
 export default IndexPage;

@@ -2,8 +2,11 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: "sosguepes",
+    title: "SOS Guêpes 74",
     siteUrl: "https://sosguepes74.fr/",
+    description: "Expert en nid de guêpes et de frelons",
+    image: "/logo.png",
+    phoneNumber: "+330681152482",
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -14,6 +17,7 @@ const config: GatsbyConfig = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sitemap",
+    "gatsby-plugin-robots-txt",
     {
       resolve: `gatsby-omni-font-loader`,
       options: {
