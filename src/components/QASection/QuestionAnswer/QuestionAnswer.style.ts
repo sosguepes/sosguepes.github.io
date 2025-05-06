@@ -1,4 +1,3 @@
-import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 
 export const Container = styled.div`
