@@ -49,5 +49,3 @@ export const Question = styled.p`
   width: calc(100% - 30px);
   margin: 0px;
 `;
-
-export const StyledStaticImage = styled(StaticImage)``;

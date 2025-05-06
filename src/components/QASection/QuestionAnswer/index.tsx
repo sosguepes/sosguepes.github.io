@@ -5,7 +5,6 @@ import {
   ExpandedContainer,
   Question,
   QuestionContainer,
-  StyledStaticImage,
 } from "./QuestionAnswer.style";
 import { StaticImage } from "gatsby-plugin-image";
 
