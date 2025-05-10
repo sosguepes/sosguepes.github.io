@@ -4,7 +4,7 @@ const siteUrl = "https://sosguepes74.fr/";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: "SOS Guêpes 74 - Expert en nid de guêpes et de frelons",
+    title: "SOS Guêpes 74 - Destruction nids de guêpes et de frelons",
     siteUrl,
     description:
       "SOS Guêpes 74 – Intervention rapide et efficace pour la destruction de nids de guêpes et de frelons en Haute-Savoie (74). Service professionnel, sécurisé et garanti. Devis gratuit 7j/7.",
