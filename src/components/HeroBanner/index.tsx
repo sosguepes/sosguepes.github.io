@@ -8,7 +8,6 @@ import {
   TextTitle,
   ButtonContainer,
   StyledViewMoreButton,
-  SubTitle,
   Wrapper,
 } from "./HeroBanner.style";
 import { StaticImage } from "gatsby-plugin-image";
@@ -30,10 +29,11 @@ const HeroBanner = () => (
             <TextTitle>
               Expert en nids de guêpes et de frelons dans le Chablais
             </TextTitle>
-            <SubTitle>
-              SOS Guêpes 74 opère dans toute la région du Chablais et ses
-              alentours. Appelez Ghislain pour obtenir un devis!
-            </SubTitle>
+            <p>
+              SOS Guêpes 74, votre spécialiste local pour une intervention
+              rapide même dans les zones les plus difficiles d'accès. Contactez
+              Ghislain pour un devis !
+            </p>
             <ButtonContainer>
               <CallButton />
               <StyledViewMoreButton sectionId="quality-guarantees" />

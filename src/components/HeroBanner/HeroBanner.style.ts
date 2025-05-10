@@ -71,11 +71,3 @@ export const ButtonContainer = styled.div`
 export const StyledViewMoreButton = styled(ViewMoreButton)`
   margin-left: 16px;
 `;
-
-export const SubTitle = styled.p`
-  display: none;
-
-  @media screen and (min-width: 52em) {
-    display: block;
-  }
-`;
