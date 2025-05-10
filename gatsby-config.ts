@@ -7,7 +7,7 @@ const config: GatsbyConfig = {
     title: "SOS Guêpes 74 - Destruction nids de guêpes et de frelons",
     siteUrl,
     description:
-      "SOS Guêpes 74 – Intervention rapide et efficace pour la destruction de nids de guêpes et de frelons en Haute-Savoie (74). Service professionnel, sécurisé et garanti. Devis gratuit 7j/7.",
+      "SOS Guêpes 74 – Intervention rapide et efficace pour la destruction de nids de guêpes et de frelons en Haute-Savoie (74). Devis gratuit 7j/7.",
     image: "/logo.png",
     phoneNumber: "+330681152482",
   },
