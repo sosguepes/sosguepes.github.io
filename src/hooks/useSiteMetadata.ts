@@ -10,6 +10,7 @@ export const useSiteMetadata = () => {
           phoneNumber
           image
           siteUrl
+          keywords
         }
       }
     }

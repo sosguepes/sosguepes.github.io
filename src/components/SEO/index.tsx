@@ -16,6 +16,7 @@ export const SEO = ({ title, description, pathname, children }: PropsType) => {
     phoneNumber,
     siteUrl,
     twitterUsername,
+    keywords,
   } = useSiteMetadata();
 
   const seo = {
@@ -24,6 +25,7 @@ export const SEO = ({ title, description, pathname, children }: PropsType) => {
     image: `${siteUrl}${image}`,
     url: `${siteUrl}${pathname || ``}`,
     twitterUsername,
+    keywords,
   };
 
   return (
@@ -31,6 +33,7 @@ export const SEO = ({ title, description, pathname, children }: PropsType) => {
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
+      <meta name="keywords" content={seo.keywords} />
       <script type="application/ld+json">
         {`
 {
@@ -52,7 +55,7 @@ export const SEO = ({ title, description, pathname, children }: PropsType) => {
     "telephone": "${phoneNumber}",
     "contactType": "Manager"
   },
-  "keywords": "guêpes,frelons,nid,expert,Haute Savoie,74,Chablais",
+  "keywords": "${seo.keywords}",
   "currenciesAccepted": "EUR",
   "openingHours": "Mo,Su 6:00-21:00"
 }

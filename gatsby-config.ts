@@ -10,6 +10,8 @@ const config: GatsbyConfig = {
       "SOS Guêpes 74 – Intervention rapide et efficace pour la destruction de nids de guêpes et de frelons en Haute-Savoie (74). Devis gratuit 7j/7.",
     image: "/logo.png",
     phoneNumber: "+330681152482",
+    keywords:
+      "destruction nid de guêpes, destruction nid de frelons, enlever nid de guêpes, enlever nid de frelons, SOS guêpes Haute-Savoie, exterminateur guêpes 74, intervention nid guêpes, traitement guêpes, traitement frelons, entreprise guêpes 74, désinsectisation guêpes, urgence guêpes Haute-Savoie, guêpes 74, frelons 74",
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
