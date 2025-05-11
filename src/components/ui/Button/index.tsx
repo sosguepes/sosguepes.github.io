@@ -6,11 +6,12 @@ interface PropsType {
   children: ReactNode;
   href: string;
   className?: string;
+  title: string;
 }
 
-const Button = ({ primary, children, href, className }: PropsType) => (
+const Button = ({ primary, children, href, className, title }: PropsType) => (
   <Wrapper className={className}>
-    <a href={href}>
+    <a href={href} title={title}>
       <Container $primary={primary}>{children}</Container>
     </a>
   </Wrapper>

@@ -34,6 +34,11 @@ export const SEO = ({ title, description, pathname, children }: PropsType) => {
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       <meta name="keywords" content={seo.keywords} />
+      <meta property="og:title" content={seo.title} />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={siteUrl} />
+      <meta property="og:image" content={seo.image} />
+      <meta property="og:locale" content="fr_FR" />
       <script type="application/ld+json">
         {`
 {

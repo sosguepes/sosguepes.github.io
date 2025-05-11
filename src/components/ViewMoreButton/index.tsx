@@ -8,7 +8,12 @@ interface PropsType {
 }
 
 const ViewMoreButton = ({ sectionId, text, className }: PropsType) => (
-  <Button href={`#${sectionId}`} primary className={className}>
+  <Button
+    href={`#${sectionId}`}
+    primary
+    className={className}
+    title={text || "Voir plus"}
+  >
     <span>{text || "Voir plus"}</span>
   </Button>
 );
