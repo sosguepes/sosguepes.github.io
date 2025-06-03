@@ -39,6 +39,7 @@ export const SEO = ({ title, description, pathname, children }: PropsType) => {
       <meta property="og:url" content={siteUrl} />
       <meta property="og:image" content={seo.image} />
       <meta property="og:locale" content="fr_FR" />
+      <link rel="icon" type="image/x-icon" href="/logo.png"></link>
       <script type="application/ld+json">
         {`
 {
