@@ -11,6 +11,7 @@ export const ServiceSection = () => {
           sourceInstanceName: { eq: "services" }
           childMdx: { frontmatter: { text: { ne: null } } }
         }
+        sort: { childMdx: { frontmatter: { order: ASC } } }
       ) {
         edges {
           node {

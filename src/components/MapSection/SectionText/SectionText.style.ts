@@ -14,6 +14,7 @@ export const Container = styled.div`
 
 export const AreaOfInterventionText = styled.p`
   margin-top: 0px;
+  margin-bottom: 5px;
 `;
 
 export const AskForQuoteButton = styled(ViewMoreButton)`
@@ -28,4 +29,10 @@ export const MapSectionTitle = styled(SecondaryTitle)`
   @media screen and (min-width: 40em) {
     margin-top: 0px;
   }
+`;
+
+export const TownList = styled.p`
+  font-size: 12px;
+  color: #adadad;
+  margin-bottom: 15px;
 `;
