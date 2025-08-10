@@ -39,6 +39,7 @@
     "react-dom": "^18.2.0",
     "react-glider": "^5.0.0",
     "react-helmet": "^6.1.0",
+    "react-helmet-async": "^2.0.5",
     "react-leaflet": "^4.2.1",
     "styled-components": "^6.1.1"
   },

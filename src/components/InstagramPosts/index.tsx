@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import {
   BlockQuote,
   Container,
@@ -298,6 +298,7 @@ export const InstagramPosts = () => {
         <GliderSection>
           <Glider
             hasDots
+            draggable
             responsive={[
               { breakpoint: 0, settings: { slidesToShow: 1 } },
               { breakpoint: 631, settings: { slidesToShow: 2 } },

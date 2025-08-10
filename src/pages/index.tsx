@@ -10,10 +10,11 @@ import { ServiceSection } from "components/ServiceSection";
 import { SEO } from "components/SEO";
 import WhoAreWe from "components/WhoAreWe";
 import { InstagramPosts } from "components/InstagramPosts";
+import { HelmetProvider } from "react-helmet-async";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <>
+    <HelmetProvider>
       <NavBar />
       <main>
         <HeroBanner />
@@ -25,7 +26,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <InstagramPosts />
       </main>
       <Footer />
-    </>
+    </HelmetProvider>
   );
 };
 
