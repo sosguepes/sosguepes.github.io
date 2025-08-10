@@ -9,6 +9,7 @@ import { QASection } from "components/QASection";
 import { ServiceSection } from "components/ServiceSection";
 import { SEO } from "components/SEO";
 import WhoAreWe from "components/WhoAreWe";
+import { InstagramPosts } from "components/InstagramPosts";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -21,6 +22,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <ServiceSection />
         <WhoAreWe />
         <QASection />
+        <InstagramPosts />
       </main>
       <Footer />
     </>
