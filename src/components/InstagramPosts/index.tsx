@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-import { Container, Post } from "./InstagramPosts.style";
+import { Container, GliderSection, Post } from "./InstagramPosts.style";
+
+import Glider from "react-glider";
+import "glider-js/glider.min.css";
+import "./glider-js.override.css";
+
 interface PropsType {
   postId: string;
 }
+
 export const InstagramEmbeddedPost = ({ postId }: PropsType) => {
   return (
     <Post>
@@ -307,9 +313,23 @@ export const InstagramPosts = () => {
         <script src="//www.instagram.com/embed.js"></script>
       </Helmet>
       <Container>
-        <InstagramEmbeddedPost postId="DM7d11UI8ew" />
-        <InstagramEmbeddedPost postId="DM28syLoJav" />
-        <InstagramEmbeddedPost postId="DMnjQphofVI" />
+        <GliderSection>
+          <Glider
+            hasDots
+            responsive={[
+              { breakpoint: 0, settings: { slidesToShow: 1 } },
+              { breakpoint: 631, settings: { slidesToShow: 2 } },
+              { breakpoint: 1262, settings: { slidesToShow: 3 } },
+            ]}
+            slidesToScroll={1}
+          >
+            <InstagramEmbeddedPost postId="DNGcp7vIeyQ" />
+            <InstagramEmbeddedPost postId="DM9u7WqoKW8" />
+            <InstagramEmbeddedPost postId="DM7d11UI8ew" />
+            <InstagramEmbeddedPost postId="DM28syLoJav" />
+            <InstagramEmbeddedPost postId="DMnjQphofVI" />
+          </Glider>
+        </GliderSection>
       </Container>
     </>
   );
