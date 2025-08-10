@@ -249,7 +249,7 @@ export const InstagramEmbeddedPost = ({ postId }: PropsType) => {
                 }}
               ></div>
             </div>
-          </a>
+          </InstaLink>
           <p
             style={{
               color: "#c9c8cd",
@@ -279,7 +279,7 @@ export const InstagramEmbeddedPost = ({ postId }: PropsType) => {
               target="_blank"
             >
               Une publication partagée par @sos_guepes_74
-            </InstaLink>
+            </a>
           </p>
         </div>
       </BlockQuote>
