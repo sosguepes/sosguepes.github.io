@@ -95,9 +95,9 @@ export const InstagramEmbeddedPost = ({ postId }: PropsType) => {
               >
                 <g
                   stroke="none"
-                  stroke-width="1"
+                  strokeWidth="1"
                   fill="none"
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                 >
                   <g
                     transform="translate(-511.000000, -20.000000)"

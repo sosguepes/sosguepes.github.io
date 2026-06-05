@@ -1,19 +1,20 @@
 import React, { ReactNode } from "react";
 import { Container, Wrapper } from "./Button.style";
+import { Link } from "gatsby";
 
 interface PropsType {
   primary?: boolean;
   children: ReactNode;
   href: string;
   className?: string;
-  title: string;
+  title?: string;
 }
 
 const Button = ({ primary, children, href, className, title }: PropsType) => (
   <Wrapper className={className}>
-    <a href={href} title={title}>
+    <Link to={href} title={title}>
       <Container $primary={primary}>{children}</Container>
-    </a>
+    </Link>
   </Wrapper>
 );
 
