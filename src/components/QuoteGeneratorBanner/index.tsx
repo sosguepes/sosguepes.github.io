@@ -9,38 +9,37 @@ import {
   ButtonContainer,
   StyledViewMoreButton,
   Wrapper,
-} from "./HeroBanner.style";
+} from "./QuoteGeneratorBanner.style";
 import { StaticImage } from "gatsby-plugin-image";
 import CallButton from "components/CallButton";
 import Button from "components/ui/Button";
 
 export const QuoteGeneratorLink = () => (
-  <Button href="/quote-generation" primary title="Générer un devis">
-    <span>Générer un devis</span>
+      <Button
+        href="/"
+        primary
+        title="Voir les services"
+      >
+    <span>Revenir aux services</span>
   </Button>
 );
 
-const HeroBanner = () => (
+const QuoteGeneratorBanner = () => (
   <Section id="banner">
     <Wrapper>
       <Container>
         <Seperator>
           <ImageContainer>
             <StaticImage
-              src="../../images/beekeeper-black.png"
-              alt="Beepkeeper with wasp hive"
+              src="../../images/quote-generation-banner.png"
+              alt="Quote generation banner"
               placeholder="blurred"
             />
           </ImageContainer>
           <TextContainer>
             <TextTitle>
-              Expert en nids de guêpes et de frelons dans le Chablais
+              Generer un devis en ligne
             </TextTitle>
-            <p>
-              SOS Guêpes 74, votre spécialiste local pour une intervention
-              rapide même dans les zones les plus difficiles d'accès. Contactez
-              Ghislain pour un devis !
-            </p>
             <ButtonContainer>
               <QuoteGeneratorLink />
               <CallButton />
@@ -52,4 +51,4 @@ const HeroBanner = () => (
   </Section>
 );
 
-export default HeroBanner;
+export default QuoteGeneratorBanner;

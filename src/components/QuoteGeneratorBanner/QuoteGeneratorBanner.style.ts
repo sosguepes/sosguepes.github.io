@@ -1,0 +1,73 @@
+import { styled } from "styled-components";
+
+import { primaryColor } from "style";
+import { titleStyle } from "components/ui/Title";
+import ViewMoreButton from "components/ViewMoreButton";
+
+export const Section = styled.section`
+  padding-bottom: 32px;
+  padding-top: 16px;
+  width: 100%;
+  background-color: ${primaryColor};
+
+  @media screen and (min-width: 40em) {
+    padding-bottom: 32px;
+    padding-top: 0px;
+  }
+`;
+
+export const Wrapper = styled.div`
+  max-width: 1080px;
+  margin: auto;
+`;
+
+export const Container = styled.div`
+  margin-left: 32px;
+  margin-right: 32px;
+`;
+
+export const Seperator = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+
+  @media screen and (min-width: 40em) {
+    flex-direction: row;
+  }
+`;
+
+export const TextContainer = styled.div`
+  width: 100%;
+
+  @media screen and (min-width: 40em) {
+    width: 50%;
+  }
+`;
+
+export const ImageContainer = styled.div`
+  width: 50%;
+  max-width: 450px;
+  @media screen and (min-width: 40em) {
+    width: 30%;
+  }
+`;
+
+export const TextTitle = styled.h1`
+  ${titleStyle}
+  font-size: 25px;
+  margin-top: 0px;
+
+  @media screen and (min-width: 52em) {
+    font-size: 40px;
+  }
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const StyledViewMoreButton = styled(ViewMoreButton)`
+  margin-left: 16px;
+`;
