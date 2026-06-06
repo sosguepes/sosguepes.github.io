@@ -48,13 +48,15 @@ const QuoteGeneratorCriteria = (props: QuoteGeneratorCriteriaProps) => {
         <div key={index}>
           <StyledInput
             type="checkbox"
-            id={`${option.label}`}
-            name="fruit"
+            id={`${title}-${option.label}`}
+            name={`${title}-${option.label}`}
             value={option.label}
             checked={selectedValue?.label === option.label}
             onChange={handleOptionChange}
           />
-          <StyledLabel htmlFor={option.label}>{option.label}</StyledLabel>
+          <StyledLabel htmlFor={`${title}-${option.label}`}>
+            {option.label}
+          </StyledLabel>
           <br />
         </div>
       ))}
@@ -199,7 +201,7 @@ export const QuoteGenerator: React.FC = () => {
         <div>
           <PriceEstimation>
             Prix estimé :{" "}
-            <b>{estimatedPrice === "N/A" ? "N/A" : `${estimatedPrice}*`}</b>
+            <b>{estimatedPrice === "N/A" ? "--" : `${estimatedPrice}*`}</b>
           </PriceEstimation>
           <br />
           <PriceEstimationDescription>
