@@ -3,6 +3,9 @@ name: Deploy Gatsby site to Pages
 on:
   push:
     branches: ["main"]
+  paths:
+    - "frontend/**"
+    - .github/workflows/gatsby.yml
   workflow_dispatch:
 
 permissions:
