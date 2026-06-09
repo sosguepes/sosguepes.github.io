@@ -30,7 +30,6 @@ jobs:
           node-version: "20.10.0"
       - name: Setup Pages
         id: pages
-        working-directory: ./frontend
         uses: actions/configure-pages@v3
         with:
           static_site_generator: gatsby
@@ -52,10 +51,9 @@ jobs:
           PREFIX_PATHS: "true"
         run: yarn run github-pages-build
       - name: Upload artifact
-        working-directory: ./frontend
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: ./frontend/public
 
   # Deployment job
   deploy:
@@ -66,6 +64,5 @@ jobs:
     needs: build
     steps:
       - name: Deploy to GitHub Pages
-        working-directory: ./frontend
         id: deployment
         uses: actions/deploy-pages@v4
