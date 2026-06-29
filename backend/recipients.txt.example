@@ -1,0 +1,5 @@
+# Email recipients for quote notifications.
+# One email address per line.
+# Lines starting with '#' and blank lines are ignored.
+
+antoine.eudes@gmail.com

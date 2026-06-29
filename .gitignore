@@ -3,3 +3,8 @@
 **/public
 **/src/gatsby-types.d.ts
 **/.DS_Store
+
+# Backend
+backend/backend
+backend/.env
+backend/recipients.txt
