@@ -7,21 +7,16 @@ import {
   ImageContainer,
   TextTitle,
   ButtonContainer,
-  StyledViewMoreButton,
   Wrapper,
 } from "./QuoteGeneratorBanner.style";
 import { StaticImage } from "gatsby-plugin-image";
 import CallButton from "components/CallButton";
-import Button from "components/ui/Button";
+import { LinkButton } from "components/ui/Button";
 
 export const QuoteGeneratorLink = () => (
-      <Button
-        href="/"
-        primary
-        title="Voir les services"
-      >
+  <LinkButton href="/" primary title="Voir les services">
     <span>Revenir aux services</span>
-  </Button>
+  </LinkButton>
 );
 
 const QuoteGeneratorBanner = () => (
@@ -37,9 +32,7 @@ const QuoteGeneratorBanner = () => (
             />
           </ImageContainer>
           <TextContainer>
-            <TextTitle>
-              Generer un devis en ligne
-            </TextTitle>
+            <TextTitle>Generer un devis en ligne</TextTitle>
             <ButtonContainer>
               <QuoteGeneratorLink />
               <CallButton />

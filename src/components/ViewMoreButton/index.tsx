@@ -1,4 +1,4 @@
-import Button from "components/ui/Button";
+import { LinkButton } from "components/ui/Button";
 import React from "react";
 
 interface PropsType {
@@ -8,14 +8,14 @@ interface PropsType {
 }
 
 const ViewMoreButton = ({ sectionId, text, className }: PropsType) => (
-  <Button
+  <LinkButton
     href={`#${sectionId}`}
     primary
     className={className}
     title={text || "Voir plus"}
   >
     <span>{text || "Voir plus"}</span>
-  </Button>
+  </LinkButton>
 );
 
 export default ViewMoreButton;

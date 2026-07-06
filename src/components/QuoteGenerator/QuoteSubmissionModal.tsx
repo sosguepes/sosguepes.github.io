@@ -1,14 +1,20 @@
 import React, { useState } from "react";
-import { ModalContainer } from "./QuoteSubmissionModal.style";
-import Button from "components/ui/Button";
+import {
+  ButtonContainer,
+  FormInput,
+  ModalContainer,
+  StyledInput,
+  Title,
+} from "./QuoteSubmissionModal.style";
+import { CriteriaOption } from "./interfaces";
+import { SubmitButtom } from "components/ui/Button";
+import { FormWrapper } from "./QuoteSubmissionModal.style";
 
 interface PropsType {
   closeModal: () => void;
   estimatedPriceRange: string;
   quoteData: {
-    [criteria: string]: {
-      label: string;
-    };
+    [criteria: string]: CriteriaOption | undefined;
   };
 }
 
@@ -25,6 +31,7 @@ export const QuoteSubmissionModal = ({
   const [phoneNumber, setPhoneNumber] = useState<string | undefined>();
 
   const onClickSubmit = async () => {
+    console.log("hello");
     setIsLoading(true);
     const response = await fetch("https://api.sosguepes74.fr", {
       method: "POST",
@@ -50,37 +57,56 @@ export const QuoteSubmissionModal = ({
   };
 
   return (
-    <ModalContainer>
-      <form>
-        <label>
-          Nom et prénom
-          <input
-            type="text"
-            name="name"
-            value={customerName}
-            onChange={(event) => setCustomerName(event.target.value)}
-          />
-        </label>
-        <label>
-          Numéro de téléphone
-          <input
-            type="tel"
-            name="phoneNumber"
-            value="phoneNumber"
-            onChange={(event) =>
-              setPhoneNumber(event.target.value.replace(/[^0-9+*\s]/g, ""))
-            }
-          />
-        </label>
-        <button
-          disabled={!phoneNumber || !customerName || !isLoading || !response}
-          onClick={onClickSubmit}
-        >
-          Envoyer
-        </button>
-        {response && <div>{response}</div>}
-        <button onClick={closeModal}>Fermer</button>
-      </form>
+    <ModalContainer onClick={closeModal}>
+      <FormWrapper onClick={(event) => event.stopPropagation()}>
+        <Title>
+          Laissez-nous vos coordonnées, on vous rappelle au plus vite!
+        </Title>
+        <form>
+          <FormInput>
+            <label>
+              Nom et prénom
+              <br />
+              <StyledInput
+                type="text"
+                id="customer-name"
+                value={customerName}
+                autoComplete="name"
+                onChange={(event) => setCustomerName(event.target.value)}
+              />
+            </label>
+          </FormInput>
+          <FormInput>
+            <label>
+              Numéro de téléphone
+              <br />
+              <StyledInput
+                type="tel"
+                name="phoneNumber"
+                value={phoneNumber}
+                autoComplete="tel"
+                onChange={(event) =>
+                  setPhoneNumber(event.target.value.replace(/[^0-9+*\s]/g, ""))
+                }
+              />
+            </label>
+          </FormInput>
+          <ButtonContainer>
+            <SubmitButtom
+              disabled={
+                !phoneNumber || !customerName || !!isLoading || !!response
+              }
+              onClick={onClickSubmit}
+            >
+              {isLoading ? "Envoi..." : "Envoyer"}
+            </SubmitButtom>
+            <SubmitButtom onClick={closeModal} transparent>
+              Fermer
+            </SubmitButtom>
+          </ButtonContainer>
+          {response && <div>{response}</div>}
+        </form>
+      </FormWrapper>
     </ModalContainer>
   );
 };
