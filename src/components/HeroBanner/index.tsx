@@ -7,17 +7,16 @@ import {
   ImageContainer,
   TextTitle,
   ButtonContainer,
-  StyledViewMoreButton,
   Wrapper,
 } from "./HeroBanner.style";
 import { StaticImage } from "gatsby-plugin-image";
 import CallButton from "components/CallButton";
-import Button from "components/ui/Button";
+import { LinkButton } from "components/ui/Button";
 
 export const QuoteGeneratorLink = () => (
-  <Button href="/quote-generation" primary title="Générer un devis">
+  <LinkButton href="/quote-generation" primary title="Générer un devis">
     <span>Générer un devis</span>
-  </Button>
+  </LinkButton>
 );
 
 const HeroBanner = () => (

@@ -4,13 +4,26 @@ import {
   primaryTextColor,
   secondaryColor,
   secondaryTextColor,
+  concrete,
+  lightGrey,
 } from "style";
 import { styled } from "styled-components";
 
-export const Container = styled.div<{ $primary?: boolean }>`
-  background-color: ${(props) =>
-    props.$primary ? primaryColor : secondaryColor};
-  color: ${(props) => (props.$primary ? primaryTextColor : secondaryTextColor)};
+export const Container = styled.div<{
+  $primary?: boolean;
+  $disabled?: boolean;
+  $transparent?: boolean;
+}>`
+  ${(props) =>
+    !props.$transparent &&
+    `background-color:
+    ${props.$disabled ? lightGrey : props.$primary ? primaryColor : secondaryColor};`}
+  color: ${(props) =>
+    props.$transparent
+      ? "black"
+      : props.$primary
+        ? primaryTextColor
+        : secondaryTextColor};
   padding: 16px;
   display: flex;
   border-radius: 10px;
@@ -20,7 +33,11 @@ export const Container = styled.div<{ $primary?: boolean }>`
   @media (hover: hover) {
     &:hover {
       background-color: ${(props) =>
-        props.$primary ? darkPrimaryColor : secondaryColor};
+        props.$transparent
+          ? concrete
+          : props.$primary
+            ? darkPrimaryColor
+            : secondaryColor};
     }
   }
 `;

@@ -7,14 +7,12 @@ import {
   QuoteCriteriaTitle,
   StyledInput,
   StyledLabel,
+  StyledSubmitButton,
   Wrapper,
 } from "./QuoteGenerator.style";
 import { useWindowDimensions } from "hooks/useWindowDimensions";
-
-interface CriteriaOption {
-  label: string;
-  priceIndicator: number; // indicates how much this option affects the price
-}
+import { QuoteSubmissionModal } from "./QuoteSubmissionModal";
+import { CriteriaOption } from "./interfaces";
 
 interface QuoteGeneratorCriteriaProps {
   title: string;
@@ -154,6 +152,8 @@ export const QuoteGenerator: React.FC = () => {
     ),
   );
 
+  const [isSubmissionModalVisible, setIsSubmissionModalVisible] =
+    useState(false);
   const handleSelectedOption = (
     criteriaKey: string,
     option: CriteriaOption | undefined,
@@ -183,42 +183,56 @@ export const QuoteGenerator: React.FC = () => {
   const estimatedPrice = calculatePriceEstimation();
 
   return (
-    <Wrapper>
-      <FormContainer>
-        {Object.entries(form.criteria).map(([criteriaKey, criteria]) => (
-          <QuoteGeneratorCriteria
-            key={criteriaKey}
-            title={criteria.label}
-            options={criteria.options}
-            onSelectedOption={(option) =>
-              handleSelectedOption(criteriaKey, option)
-            }
-          />
-        ))}
-      </FormContainer>
+    <>
+      {isSubmissionModalVisible && (
+        <QuoteSubmissionModal
+          closeModal={() => setIsSubmissionModalVisible(false)}
+          estimatedPriceRange={estimatedPrice}
+          quoteData={allSelectedOptions}
+        />
+      )}
+      <Wrapper>
+        <FormContainer>
+          {Object.entries(form.criteria).map(([criteriaKey, criteria]) => (
+            <QuoteGeneratorCriteria
+              key={criteriaKey}
+              title={criteria.label}
+              options={criteria.options}
+              onSelectedOption={(option) =>
+                handleSelectedOption(criteriaKey, option)
+              }
+            />
+          ))}
+        </FormContainer>
 
-      <PriceEstimationBox>
-        <div>
-          <PriceEstimation>
-            Prix estimé :{" "}
-            <b>{estimatedPrice === "N/A" ? "--" : `${estimatedPrice}*`}</b>
-          </PriceEstimation>
-          <br />
-          <PriceEstimationDescription>
-            {estimatedPrice === "N/A" ? (
-              <>
-                {width && width >= 700 ? "⬅️ " : "⬆️ "}Veuillez remplir le
-                formulaire afin d'obtenir une estimation de prix.
-              </>
-            ) : (
-              <>
-                *Cette estimation est indicative et peut varier selon la
-                situation réelle sur place.
-              </>
-            )}
-          </PriceEstimationDescription>
-        </div>
-      </PriceEstimationBox>
-    </Wrapper>
+        <PriceEstimationBox>
+          <div>
+            <PriceEstimation>
+              Prix estimé :{" "}
+              <b>{estimatedPrice === "N/A" ? "--" : `${estimatedPrice}*`}</b>
+            </PriceEstimation>
+            <br />
+            <PriceEstimationDescription>
+              {estimatedPrice === "N/A" ? (
+                <>
+                  {width && width >= 700 ? "⬅️ " : "⬆️ "}Veuillez remplir le
+                  formulaire afin d'obtenir une estimation de prix.
+                </>
+              ) : (
+                <>
+                  <StyledSubmitButton
+                    onClick={() => setIsSubmissionModalVisible(true)}
+                  >
+                    Partager mes coordonnées
+                  </StyledSubmitButton>
+                  *Cette estimation est indicative et peut varier selon la
+                  situation réelle sur place.
+                </>
+              )}
+            </PriceEstimationDescription>
+          </div>
+        </PriceEstimationBox>
+      </Wrapper>
+    </>
   );
 };
