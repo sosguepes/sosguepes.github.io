@@ -1,4 +1,4 @@
-import { primaryColor, secondaryColor } from "style";
+import { concrete, primaryColor } from "style";
 import styled from "styled-components";
 
 export const ModalContainer = styled.div`
@@ -37,11 +37,12 @@ export const StyledInput = styled.input`
   width: 100%;
   border-radius: 3px;
   outline: none;
-  border: 2px solid ${primaryColor};
-  height: 30px;
+  border: 2px solid ${concrete};
+  height: 35px;
+  font-size: 18px;
 
   &:focus {
-    border: 2px solid ${secondaryColor};
+    border: 2px solid ${primaryColor};
   }
 `;
 

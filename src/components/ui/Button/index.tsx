@@ -33,7 +33,7 @@ export const LinkButton = ({
   </Wrapper>
 );
 
-export const SubmitButtom = ({
+export const SubmitButton = ({
   primary,
   children,
   onClick,

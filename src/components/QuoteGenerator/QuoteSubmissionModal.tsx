@@ -7,7 +7,7 @@ import {
   Title,
 } from "./QuoteSubmissionModal.style";
 import { CriteriaOption } from "./interfaces";
-import { SubmitButtom } from "components/ui/Button";
+import { SubmitButton } from "components/ui/Button";
 import { FormWrapper } from "./QuoteSubmissionModal.style";
 
 interface PropsType {
@@ -33,19 +33,23 @@ export const QuoteSubmissionModal = ({
   const onClickSubmit = async () => {
     console.log("hello");
     setIsLoading(true);
-    const response = await fetch("https://api.sosguepes74.fr", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
+    const response = await window.fetch(
+      "https://api.sosguepes74.fr/api/quotes",
+      {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          formData: quoteData,
+          priceRange: estimatedPriceRange,
+          phoneNumber: phoneNumber,
+          name: customerName,
+        }),
       },
-      body: JSON.stringify({
-        formData: quoteData,
-        priceRange: estimatedPriceRange,
-        phoneNumber: phoneNumber,
-        name: customerName,
-      }),
-    });
+    );
     if (response.status == 201) {
       setResponse(
         "Merci pour ces informations! Nous vous contacterons dès que possible.",
@@ -70,7 +74,7 @@ export const QuoteSubmissionModal = ({
               <StyledInput
                 type="text"
                 id="customer-name"
-                value={customerName}
+                value={customerName || ""}
                 autoComplete="name"
                 onChange={(event) => setCustomerName(event.target.value)}
               />
@@ -83,7 +87,7 @@ export const QuoteSubmissionModal = ({
               <StyledInput
                 type="tel"
                 name="phoneNumber"
-                value={phoneNumber}
+                value={phoneNumber || ""}
                 autoComplete="tel"
                 onChange={(event) =>
                   setPhoneNumber(event.target.value.replace(/[^0-9+*\s]/g, ""))
@@ -92,17 +96,17 @@ export const QuoteSubmissionModal = ({
             </label>
           </FormInput>
           <ButtonContainer>
-            <SubmitButtom
+            <SubmitButton
               disabled={
                 !phoneNumber || !customerName || !!isLoading || !!response
               }
               onClick={onClickSubmit}
             >
               {isLoading ? "Envoi..." : "Envoyer"}
-            </SubmitButtom>
-            <SubmitButtom onClick={closeModal} transparent>
+            </SubmitButton>
+            <SubmitButton onClick={closeModal} transparent>
               Fermer
-            </SubmitButtom>
+            </SubmitButton>
           </ButtonContainer>
           {response && <div>{response}</div>}
         </form>

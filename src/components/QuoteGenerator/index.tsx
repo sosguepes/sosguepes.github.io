@@ -7,10 +7,10 @@ import {
   QuoteCriteriaTitle,
   StyledInput,
   StyledLabel,
+  StyledSubmitButton,
   Wrapper,
 } from "./QuoteGenerator.style";
 import { useWindowDimensions } from "hooks/useWindowDimensions";
-import { SubmitButtom } from "components/ui/Button";
 import { QuoteSubmissionModal } from "./QuoteSubmissionModal";
 import { CriteriaOption } from "./interfaces";
 
@@ -220,11 +220,11 @@ export const QuoteGenerator: React.FC = () => {
                 </>
               ) : (
                 <>
-                  <SubmitButtom
+                  <StyledSubmitButton
                     onClick={() => setIsSubmissionModalVisible(true)}
                   >
                     Partager mes coordonnées
-                  </SubmitButtom>
+                  </StyledSubmitButton>
                   *Cette estimation est indicative et peut varier selon la
                   situation réelle sur place.
                 </>

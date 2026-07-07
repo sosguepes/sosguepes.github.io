@@ -1,3 +1,4 @@
+import { SubmitButton } from "components/ui/Button";
 import { darkPrimaryColor, primaryColor } from "style";
 import { styled } from "styled-components";
 
@@ -75,7 +76,7 @@ export const Wrapper = styled.div`
     justify-content: space-between;
   }
 `;
-export const PriceEstimationDescription = styled.p`
+export const PriceEstimationDescription = styled.div`
   margin-top: 3px;
 `;
 
@@ -83,4 +84,8 @@ export const PriceEstimation = styled.p`
   margin-top: 0px;
   margin-bottom: 0px;
   font-size: 22px;
+`;
+
+export const StyledSubmitButton = styled(SubmitButton)`
+  margin-bottom: 10px;
 `;
